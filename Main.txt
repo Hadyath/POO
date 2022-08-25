@@ -1,0 +1,55 @@
+package Atividade;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+    
+		
+	Carro carro = new Carro();		
+    Scanner sc = new Scanner(System.in); 
+    int op = 0;
+    carro.mostraMensagem();
+    
+    do {
+    	
+    	System.out.println("Selecione a opção que deseja");
+    	System.out.println("1 - ligar");
+    	System.out.println("2 - Desligar");
+    	System.out.println("3 - Acelerar");
+    	System.out.println("4 - Frear");
+    	System.out.println("5 Sair do carro");
+    	
+    	op = sc.nextInt();
+    	
+    	switch(op)
+    	{
+    	case 1:
+    		carro.ligar();
+    		break;
+    	case 2:
+    		carro.desligar();
+    		break;
+    	case 3:
+    		carro.acelerar();
+    		break;
+    	case 4:
+    		carro.frear();
+    		break;
+    	case 5:
+    		System.out.println("Saindo");
+    		break;
+    		
+    		default:
+    			System.out.println("Opção inválida");
+    			break;
+    	
+
+    	}
+    }while(op != 5);
+    
+    sc.close();
+    
+	}
+
+}
